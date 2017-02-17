@@ -55,5 +55,15 @@ namespace WordCounter.Objects
       bool expectedOutput = true;
       Assert.Equal(expectedOutput, output);
     }
+    [Fact]
+    public void CountRepeats_CheckForNumberOfWordsInSentence_Number()
+    {
+      string userInput1 = "biggy";
+      string userInput2 = "Biggy biggy bIgGy can't you see";
+      RepeatCounter newRepeatCounter = new RepeatCounter(userInput1, userInput2);
+      int output = newRepeatCounter.CountRepeats();
+      int expectedOutput = 3;
+      Assert.Equal(expectedOutput, output);
+    }
   }
 }
