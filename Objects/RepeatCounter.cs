@@ -21,7 +21,7 @@ namespace WordCounter.Objects
     {
       foreach(string one in _words)
       {
-        if(one == _word)
+        if(one.ToUpper() == _word.ToUpper())
         {
           return true;
         }
