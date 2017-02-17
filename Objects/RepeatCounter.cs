@@ -6,16 +6,25 @@ namespace WordCounter.Objects
 {
   public class RepeatCounter
   {
-    private string _input;
+    private string _word;
+    private string _phrase;
 
-    public RepeatCounter (string input)
+    public RepeatCounter (string word, string phrase)
     {
-      _input = input;
+      _word = word;
+      _phrase = phrase;
     }
 
-    public string CountRepeats()
+    public bool CountRepeats()
     {
-      return _input;
+      if(_word == _phrase)
+      {
+        return true;
+      }
+      else
+      {
+        return false;
+      }
     }
   }
 }
