@@ -1,0 +1,18 @@
+body {
+  font-family: 'PT Mono', sans-serif;
+  font-weight: bolder;
+  background-image: url(/Content/img/background.jpg);
+  background-position: center;
+}
+
+.header {
+  min-height: 200px;
+  text-align: right;
+  background-color: #fff;
+}
+
+#header {
+  font-weight: bolder;
+  font-size: 70px;
+  padding: 70px 20px;
+}
