@@ -4,8 +4,12 @@
 
 <div class="space">
 
+  <h1>Your Results:</h1>
   @if(@Model > 0) {
-    <h1>Your Results:</h1>
     <h2>@Model</h2>
+  }
+  else
+  {
+    <h2>Your word didn't show up once</h2>
   }
 </div>
