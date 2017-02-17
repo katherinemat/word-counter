@@ -9,6 +9,7 @@ namespace WordCounter.Objects
     private string _word;
     private string _phrase;
     private string[] _words;
+    private int _count;
 
     public RepeatCounter (string word, string phrase)
     {
@@ -17,16 +18,16 @@ namespace WordCounter.Objects
       _words = _phrase.Split(' ');
     }
 
-    public bool CountRepeats()
+    public int CountRepeats()
     {
       foreach(string one in _words)
       {
         if(one.ToUpper() == _word.ToUpper())
         {
-          return true;
+          _count ++;
         }
       }
-      return false;
+      return _count;
     }
   }
 }
