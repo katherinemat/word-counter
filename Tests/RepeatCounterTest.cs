@@ -25,16 +25,16 @@ namespace WordCounter.Objects
       bool expectedOutput = true;
       Assert.Equal(expectedOutput, output);
     }
-    [Fact]
-    public void CountRepeats_CheckTwoEqualSentences_True()
-    {
-      string userInput1 = "I can't!";
-      string userInput2 = "I can't!";
-      RepeatCounter newRepeatCounter = new RepeatCounter(userInput1, userInput2);
-      bool output = newRepeatCounter.CountRepeats();
-      bool expectedOutput = true;
-      Assert.Equal(expectedOutput, output);
-    }
+    // [Fact]
+    // public void CountRepeats_CheckTwoEqualSentences_True()
+    // {
+    //   string userInput1 = "I can't!";
+    //   string userInput2 = "I can't!";
+    //   RepeatCounter newRepeatCounter = new RepeatCounter(userInput1, userInput2);
+    //   bool output = newRepeatCounter.CountRepeats();
+    //   bool expectedOutput = true;
+    //   Assert.Equal(expectedOutput, output);
+    // }
     [Fact]
     public void CountRepeats_CheckForWordInSentence_True()
     {

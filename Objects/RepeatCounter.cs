@@ -8,23 +8,25 @@ namespace WordCounter.Objects
   {
     private string _word;
     private string _phrase;
+    private string[] _words;
 
     public RepeatCounter (string word, string phrase)
     {
       _word = word;
       _phrase = phrase;
+      _words = _phrase.Split(' ');
     }
 
     public bool CountRepeats()
     {
-      if(_word == _phrase)
+      foreach(string one in _words)
       {
-        return true;
+        if(one == _word)
+        {
+          return true;
+        }
       }
-      else
-      {
-        return false;
-      }
+      return false;
     }
   }
 }
