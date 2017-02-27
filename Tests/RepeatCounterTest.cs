@@ -6,55 +6,56 @@ namespace WordCounter.Objects
 {
   public class RepeatCounterTest
   {
-    // [Fact]
-    // public void CountRepeats_ReturnInput_Input()
-    // {
-    //   string userInput = "steak";
-    //   RepeatCounter newRepeatCounter = new RepeatCounter(userInput);
-    //   string output = newRepeatCounter.CountRepeats();
-    //   string expectedOutput = "steak";
-    //   Assert.Equal(expectedOutput, output);
-    // }
-    // [Fact]
-    // public void CountRepeats_CheckTwoEqualWords_True()
-    // {
-    //   string userInput1 = "tennis";
-    //   string userInput2 = "tennis";
-    //   RepeatCounter newRepeatCounter = new RepeatCounter(userInput1, userInput2);
-    //   bool output = newRepeatCounter.CountRepeats();
-    //   bool expectedOutput = true;
-    //   Assert.Equal(expectedOutput, output);
-    // }
-    // [Fact]
-    // public void CountRepeats_CheckTwoEqualSentences_True()
-    // {
-    //   string userInput1 = "I can't!";
-    //   string userInput2 = "I can't!";
-    //   RepeatCounter newRepeatCounter = new RepeatCounter(userInput1, userInput2);
-    //   bool output = newRepeatCounter.CountRepeats();
-    //   bool expectedOutput = true;
-    //   Assert.Equal(expectedOutput, output);
-    // }
-    // [Fact]
-    // public void CountRepeats_CheckForWordInSentence_True()
-    // {
-    //   string userInput1 = "dog";
-    //   string userInput2 = "That dog is happy.";
-    //   RepeatCounter newRepeatCounter = new RepeatCounter(userInput1, userInput2);
-    //   bool output = newRepeatCounter.CountRepeats();
-    //   bool expectedOutput = true;
-    //   Assert.Equal(expectedOutput, output);
-    // }
-    // [Fact]
-    // public void CountRepeats_CheckForWordCapitalizedInSentence_True()
-    // {
-    //   string userInput1 = "my";
-    //   string userInput2 = "My cat loves me.";
-    //   RepeatCounter newRepeatCounter = new RepeatCounter(userInput1, userInput2);
-    //   bool output = newRepeatCounter.CountRepeats();
-    //   bool expectedOutput = true;
-    //   Assert.Equal(expectedOutput, output);
-    // }
+    [Fact]
+    public void CountRepeats_FindOneLetter_1()
+    {
+      string userInput1 = "e";
+      string userInput2 = "e";
+      RepeatCounter newRepeatCounter = new RepeatCounter(userInput1, userInput2);
+      int output = newRepeatCounter.CountRepeats();
+      int expectedOutput = 1;
+      Assert.Equal(expectedOutput, output);
+    }
+    [Fact]
+    public void CountRepeats_FindsEqualWords_1()
+    {
+      string userInput1 = "tennis";
+      string userInput2 = "tennis";
+      RepeatCounter newRepeatCounter = new RepeatCounter(userInput1, userInput2);
+      int output = newRepeatCounter.CountRepeats();
+      int expectedOutput = 1;
+      Assert.Equal(expectedOutput, output);
+    }
+    [Fact]
+    public void CountRepeats_CantMatchWithSentenceAsWord_0()
+    {
+      string userInput1 = "I can't!";
+      string userInput2 = "I can't!";
+      RepeatCounter newRepeatCounter = new RepeatCounter(userInput1, userInput2);
+      int output = newRepeatCounter.CountRepeats();
+      int expectedOutput = 0;
+      Assert.Equal(expectedOutput, output);
+    }
+    [Fact]
+    public void CountRepeats_CheckForWordInSentence_1()
+    {
+      string userInput1 = "dog";
+      string userInput2 = "That dog is happy.";
+      RepeatCounter newRepeatCounter = new RepeatCounter(userInput1, userInput2);
+      int output = newRepeatCounter.CountRepeats();
+      int expectedOutput = 1;
+      Assert.Equal(expectedOutput, output);
+    }
+    [Fact]
+    public void CountRepeats_CheckForWordCapitalizedInSentence_1()
+    {
+      string userInput1 = "my";
+      string userInput2 = "My cat loves me.";
+      RepeatCounter newRepeatCounter = new RepeatCounter(userInput1, userInput2);
+      int output = newRepeatCounter.CountRepeats();
+      int expectedOutput = 1;
+      Assert.Equal(expectedOutput, output);
+    }
     [Fact]
     public void CountRepeats_CheckForNumberOfWordsInSentence_Number()
     {
